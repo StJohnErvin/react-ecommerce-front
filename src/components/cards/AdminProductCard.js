@@ -21,7 +21,7 @@ const AdminProductCard = ({ product, handleRemove }) => {
       }
       actions={[
         <Link to={`/admin/product/${slug}`}>
-          <EditOutlined className="text-warning" />
+          <EditOutlined className="text-primary" />
         </Link>,
         <DeleteOutlined
           onClick={() => handleRemove(slug)}
