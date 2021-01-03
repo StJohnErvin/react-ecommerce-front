@@ -65,7 +65,7 @@ const Header = () => {
 
       <Item key="cart" icon={<ShoppingCartOutlined />} className="text-success font-weight-bold ">
         <Link to="/cart">
-<Badge count={cart.length} offset={[9, 0]} className="text-white">Cart</Badge>
+<Badge count={cart.length} offset={[9, 0]} >Cart</Badge>
 
 
         </Link>
