@@ -54,8 +54,8 @@ const Header = () => {
         <Link to="/"> <img
               src={Logo}
               style={{
-              height: "30px",
-           width:"50"
+              height: "40px",
+           width:"70px"
                }}/></Link>
       </Item>
 
