@@ -15,6 +15,8 @@ import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Search from "../forms/Search";
+import Logo from "./logo.png";
+
 
 const { SubMenu, Item } = Menu;
 
@@ -43,13 +45,18 @@ const Header = () => {
 
   return (
     <Menu
-      theme="dark"
+      theme="light"
       onClick={handleClick}
       selectedKeys={[current]}
       mode="horizontal"
     >
-      <Item key="home" icon={<CrownTwoTone />} className=" font-weight-bold" >
-        <Link to="/">CerJam</Link>
+      <Item key="home"  className=" font-weight-bold" >
+        <Link to="/"> <img
+              src={Logo}
+              style={{
+              height: "30px",
+           width:"50"
+               }}/></Link>
       </Item>
 
       <Item key="shop" icon={<ShopTwoTone />}className="font-weight-bold">
