@@ -59,7 +59,7 @@ const Cart = ({history}) => {
     <div className="container-fluid pt-2">
       <div className="row">
         <div className="col-md-8">
-          <h4 className=" font-weight-bold p-3 mt-4  mb-5 display-4 bg-info text-white">Cart / {cart.length} Product</h4>
+          <h4 className=" font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white">Cart / {cart.length} Product</h4>
 
           {!cart.length ? (
             <p>
@@ -70,7 +70,7 @@ const Cart = ({history}) => {
           )}
         </div>
         <div className="col-md-4">
-          <h4 className=" font-weight-bold p-3 mt-4  mb-5 display-4 bg-info text-white">Order Summary</h4>
+          <h4 className=" font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white">Order Summary</h4>
           <hr />
           <p className=" font-weight-bold ">Products</p>
           {cart.map((c, i) => (
