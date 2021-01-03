@@ -14,7 +14,7 @@ const IconFont = createFromIconfontCN({
 const Home = () => {
   return (
     <>
-      <div className=" text-danger h1 p-5 mt-5 mb-5  font-weight-bold text-center"
+      <div className=" text-warning h1 p-5 mt-5 mb-5  font-weight-bold text-center"
 
 
       
@@ -23,7 +23,7 @@ const Home = () => {
         <Jumbotron text={["SALE SALE SALE"]} />
       </div>
 
-      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-info text-white "
+      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white "
       
       
       
@@ -32,7 +32,7 @@ const Home = () => {
       </h4>
       <NewArrivals />
 
-      <h4 className=" text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-info text-white">
+      <h4 className=" text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white">
        Best Sellers
       </h4>
       <BestSellers />
@@ -40,22 +40,22 @@ const Home = () => {
       <br />
       <br />
 
-      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-info text-white">
+      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white">
         Categories
       </h4>
       <CategoryList />
 
-      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-info text-white">
+      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white">
         Sub Categories
       </h4>
       <SubList />
 
-      <Menu theme="dark">
+      <Menu theme="light">
         <div>
           <p className="icons-list text-center font-small p-3 mt-5 mb-5  ">
             <a>Conditions of Use</a> <a>Privacy Notice</a>{" "}
             <a>Interest-Based Ads</a> <CopyrightOutlined />
-            2020-2021, Cerjam.com, Inc. or its affiliates{" "}
+            2020-2021, 100islas.com.ph, Inc. or its affiliates{" "}
             <IconFont
               type="icon-facebook"
               className="float-right h2 p-2 "/>{" "}
