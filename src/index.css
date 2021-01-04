@@ -1,8 +1,35 @@
+body {
+
+  font-family: "Roboto";
+}
+
 .slider img,
 .card-image {
   height: 450px;
   object-fit: cover;
 }
 
+.ant-carousel .slick-dots li.slick-active button {
+  background-color: rgb(255, 196, 0)!important;
+}
+.slick-dots button {
+  background-color: rgb(94, 94, 94)!important;
+}
+
+.bg-info{
+
+  background-color: white!important;
+}
+
+
+h1, h2, h3, h4, .h1, h1.home, h2.title, .collection_title {
+  font-size: 23px;
+  line-height: 1.5em;
+  margin: 0 auto 15px;
+  clear: both;
+  font-weight: 400;
+  padding-top: 4px;
+  color: #444444 !important;
+}
 
 
