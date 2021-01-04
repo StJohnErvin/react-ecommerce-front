@@ -36,5 +36,6 @@ h1, h2, h3, h4, .h1, h1.home, h2.title, .collection_title {
 .bg-warning{
 
   background-color: white!important;
+   color: #444444 !important;
 }
 
