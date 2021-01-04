@@ -54,7 +54,7 @@ const Product = ({ match }) => {
       <div className="row">
         <div className="col text-center pt-5 pb-5">
           <hr />
-          <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white ">Related Products</h4>
+          <h4 className="text-center  ">Related Products</h4>
           <hr />
         </div>
       </div>
