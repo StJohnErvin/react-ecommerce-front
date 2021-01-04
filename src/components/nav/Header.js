@@ -15,8 +15,7 @@ import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Search from "../forms/Search";
-import Logo from "./logo.png";
-
+import Logo from "../../images/logo.png";
 
 const { SubMenu, Item } = Menu;
 
@@ -50,35 +49,51 @@ const Header = () => {
       selectedKeys={[current]}
       mode="horizontal"
     >
-      <Item key="home"  className=" font-weight-bold" >
-        <Link to="/"> <img
-              src={Logo}
-              style={{
+      <Item key="home" className=" font-weight-bold">
+        <Link to="/">
+          {" "}
+          <img
+            src={Logo}
+            style={{
               height: "40px",
-           width:"55px"
-               }}/></Link>
+              width: "55px",
+            }}
+          />
+        </Link>
       </Item>
 
-      <Item key="shop" icon={<ShopTwoTone />}className="font-weight-bold">
+      <Item key="shop" icon={<ShopTwoTone />} className="font-weight-bold">
         <Link to="/shop">Shop</Link>
       </Item>
 
-      <Item key="cart" icon={<ShoppingCartOutlined />} className="text-success font-weight-bold ">
+      <Item
+        key="cart"
+        icon={<ShoppingCartOutlined />}
+        className="text-success font-weight-bold "
+      >
         <Link to="/cart">
-<Badge count={cart.length} offset={[9, 0]} >Cart</Badge>
-
-
+          <Badge count={cart.length} offset={[9, 0]}>
+            Cart
+          </Badge>
         </Link>
       </Item>
 
       {!user && (
-        <Item key="register" icon={<UserAddOutlined /> }className="float-right  font-weight-bold">
+        <Item
+          key="register"
+          icon={<UserAddOutlined />}
+          className="float-right  font-weight-bold"
+        >
           <Link to="/register">Register</Link>
         </Item>
       )}
 
       {!user && (
-        <Item key="login" icon={<UserOutlined />} className="float-right font-weight-bold">
+        <Item
+          key="login"
+          icon={<UserOutlined />}
+          className="float-right font-weight-bold"
+        >
           <Link to="/login">Login</Link>
         </Item>
       )}
@@ -91,18 +106,22 @@ const Header = () => {
           className="float-right font-weight-bold"
         >
           {user && user.role === "subscriber" && (
-            <Item icon={<SettingTwoTone />}className="font-weight-bold">
+            <Item icon={<SettingTwoTone />} className="font-weight-bold">
               <Link to="user/history">Dashboard</Link>
             </Item>
           )}
 
           {user && user.role === "admin" && (
-            <Item icon={<SettingTwoTone />}className="font-weight-bold">
+            <Item icon={<SettingTwoTone />} className="font-weight-bold">
               <Link to="admin/dashboard">Dashboard</Link>
             </Item>
           )}
 
-          <Item icon={<LogoutOutlined />} onClick={logout}className="font-weight-bold">
+          <Item
+            icon={<LogoutOutlined />}
+            onClick={logout}
+            className="font-weight-bold"
+          >
             Log Out
           </Item>
         </SubMenu>
