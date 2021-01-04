@@ -6,60 +6,68 @@ import { CopyrightOutlined, createFromIconfontCN } from "@ant-design/icons";
 import CategoryList from "../components/category/CategoryList";
 import SubList from "../components/sub/SubList";
 
-import { Menu } from "antd";
+import { Menu, Carousel, Image } from "antd";
 
 const IconFont = createFromIconfontCN({
   scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js",
 });
+const contentStyle = {
+  height: "100%",
+  width: "100%",
+  color: "#fff",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#364d79",
+  objectFit: "cover" ,
+  display: "inline-block"
+};
 const Home = () => {
   return (
     <>
-      <div className=" text-warning h1 p-5 mt-5 mb-5  font-weight-bold text-center"
-
-
-      
-      
-      >
-        <Jumbotron text={["SALE SALE SALE"]} />
+      <div className=" text-center">
+        <Carousel>
+          <div style={contentStyle}>
+            <Image width={700} src="/img/banner/Banner_carousel_01.jpg" />
+          </div>
+          <div style={contentStyle}>
+            <Image width={700} src="/img/banner/Banner_carousel_02.jpg" />
+          </div>
+          <div style={contentStyle}>
+            <Image width={700} src="/img/banner/Banner_carousel_03.jpg" />
+          </div>
+        </Carousel>
       </div>
-
-      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white "
-      
-      
-      
-      >
+<hr/>
+      <h4 className="text-center   " >
         New Arrivals
       </h4>
+      <hr/>
       <NewArrivals />
+      <hr/>
 
-      <h4 className=" text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white">
-       Best Sellers
+      <h4 className="text-center   ">
+        Best Sellers
       </h4>
+      <hr/>
       <BestSellers />
 
       <br />
       <br />
-
-      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white">
+      <hr/>
+      <h4 className="text-center   ">
         Categories
-      </h4>
+      </h4>  <hr/>
       <CategoryList />
-
-      <h4 className="text-center  font-weight-bold p-3 mt-4  mb-5 display-4 bg-warning text-white">
-        Sub Categories
-      </h4>
-      <SubList />
-
+      <hr/>
+      
+      
       <Menu theme="light">
         <div>
           <p className="icons-list text-center font-small p-3 mt-5 mb-5  ">
             <a>Conditions of Use</a> <a>Privacy Notice</a>{" "}
             <a>Interest-Based Ads</a> <CopyrightOutlined />
-            2020-2021, 100islas.com.ph, Inc. or its affiliates{" "}
-            <IconFont
-              type="icon-facebook"
-              className="float-right h2 p-2 "/>{" "}
-            <IconFont type="icon-twitter" className="float-right h2 p-2" />
+            2020-2021, VenusNaturals.com, Inc. or its affiliates{" "}
+            
           </p>
         </div>
       </Menu>
