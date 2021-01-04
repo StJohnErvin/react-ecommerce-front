@@ -27,13 +27,13 @@ const Home = () => {
       <div className=" text-center">
         <Carousel>
           <div style={contentStyle}>
-            <Image width={700} src="/img/banner/Banner_carousel_01.jpg" />
+            <Image width={700} preview={false} src="/img/banner/Banner_carousel_01.jpg" />
           </div>
           <div style={contentStyle}>
-            <Image width={700} src="/img/banner/Banner_carousel_02.jpg" />
+            <Image width={700} preview={false} src="/img/banner/Banner_carousel_02.jpg" />
           </div>
           <div style={contentStyle}>
-            <Image width={700} src="/img/banner/Banner_carousel_03.jpg" />
+            <Image width={700} preview={false} src="/img/banner/Banner_carousel_03.jpg" />
           </div>
         </Carousel>
       </div>
