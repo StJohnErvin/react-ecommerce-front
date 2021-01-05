@@ -27,22 +27,8 @@ const Shop = () => {
   const [star, setStar] = useState("");
   const [subs, setSubs] = useState([]);
   const [sub, setSub] = useState("");
-  const [brands, setBrands] = useState([
-    "Apple",
-    "Samsung",
-    "Microsoft",
-    "Lenovo",
-    "ASUS",
-  ]);
-  const [brand, setBrand] = useState("");
-  const [colors, setColors] = useState([
-    "Black",
-    "Brown",
-    "Silver",
-    "White",
-    "Blue",
-  ]);
-  const [color, setColor] = useState("");
+  
+
   const [shipping, setShipping] = useState("");
 
   let dispatch = useDispatch();
@@ -90,8 +76,7 @@ const Shop = () => {
     setPrice(value);
     setStar("");
     setSub("");
-    setBrand("");
-    setColor("");
+  
     setShipping("");
     setTimeout(() => {
       setOk(!ok);
@@ -122,8 +107,7 @@ const Shop = () => {
     setPrice([0, 0]);
     setStar("");
     setSub("");
-    setBrand("");
-    setColor("");
+   
     setShipping("");
     let inTheState = [...categoryIds];
     let justChecked = e.target.value;
@@ -148,8 +132,7 @@ const Shop = () => {
     setCategoryIds([]);
     setStar(num);
     setSub("");
-    setBrand("");
-    setColor("");
+ 
     setShipping("");
     fetchProducts({ stars: num });
   };
@@ -185,8 +168,7 @@ const Shop = () => {
     setPrice([0, 0]);
     setCategoryIds([]);
     setStar("");
-    setBrand("");
-    setColor("");
+
     setShipping("");
     fetchProducts({ sub });
   };
@@ -212,8 +194,7 @@ const Shop = () => {
     });
     setPrice([0, 0]);
     setCategoryIds([]);
-    setStar("");
-    setColor("");
+ 
     setBrand(e.target.value);
     setShipping("");
     fetchProducts({ brand: e.target.value });
@@ -240,8 +221,7 @@ const Shop = () => {
     });
     setPrice([0, 0]);
     setCategoryIds([]);
-    setStar("");
-    setBrand("");
+
     setColor(e.target.value);
     setShipping("");
     fetchProducts({ color: e.target.value });
@@ -278,8 +258,7 @@ const Shop = () => {
     setPrice([0, 0]);
     setCategoryIds([]);
     setStar("");
-    setBrand("");
-    setColor("");
+
     setShipping(e.target.value);
     fetchProducts({ shipping: e.target.value });
   };
@@ -350,31 +329,6 @@ const Shop = () => {
               </div>
             </SubMenu>
 
-            <SubMenu
-              key="5"
-              title={
-                <span className="h6 font-weight-bold">
-                  <DownSquareOutlined /> Brands
-                </span>
-              }
-            >
-              <div style={{ maringTop: "-10px" }} className="pr-5">
-                {showBrands()}
-              </div>
-            </SubMenu>
-
-            <SubMenu
-              key="6"
-              title={
-                <span className="h6 font-weight-bold">
-                  <DownSquareOutlined /> Colors
-                </span>
-              }
-            >
-              <div style={{ maringTop: "-10px" }} className="pr-5">
-                {showColors()}
-              </div>
-            </SubMenu>
 
             <SubMenu
               key="7"
