@@ -71,9 +71,7 @@ const handleAddToWishlist = (e) => {
           <TabPane tab="Description" key="1">
             {description && description}
           </TabPane>
-          <TabPane tab="More" key="2">
-            Call us on 999999.
-          </TabPane>
+      
         </Tabs>
       </div>
 
