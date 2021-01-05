@@ -173,60 +173,12 @@ const Shop = () => {
     fetchProducts({ sub });
   };
 
-  const showBrands = () =>
-    brands.map((b) => (
-      <Radio
-        value={b}
-        name={b}
-        checked={b === brand}
-        onChange={handleBrand}
-        className="pb-1 pl-4 pr-4"
-      >
-        {b}
-      </Radio>
-    ));
+  
 
-  const handleBrand = (e) => {
-    setSub("");
-    dispatch({
-      type: "SEARCH_QUERY",
-      payload: { text: "" },
-    });
-    setPrice([0, 0]);
-    setCategoryIds([]);
+  
+
+
  
-    setBrand(e.target.value);
-    setShipping("");
-    fetchProducts({ brand: e.target.value });
-  };
-
-  const showColors = () =>
-    colors.map((c) => (
-      <Radio
-        value={c}
-        name={c}
-        checked={c === color}
-        onChange={handleColor}
-        className="pb-1 pl-4 pr-4"
-      >
-        {c}
-      </Radio>
-    ));
-
-  const handleColor = (e) => {
-    setSub("");
-    dispatch({
-      type: "SEARCH_QUERY",
-      payload: { text: "" },
-    });
-    setPrice([0, 0]);
-    setCategoryIds([]);
-
-    setColor(e.target.value);
-    setShipping("");
-    fetchProducts({ color: e.target.value });
-  };
-
   const showShipping = () => (
     <>
       <Checkbox
