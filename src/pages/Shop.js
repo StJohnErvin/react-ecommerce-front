@@ -173,12 +173,12 @@ const Shop = () => {
     fetchProducts({ sub });
   };
 
-  
-
-  
-
-
  
+
+
+
+
+
   const showShipping = () => (
     <>
       <Checkbox
